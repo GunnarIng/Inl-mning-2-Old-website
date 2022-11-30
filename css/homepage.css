@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root{
+    --hero-color: #ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* HERO----------------------------------------------------------- */
+.main-hero{
+    background-image: url(/Images/jesus-background.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 75vh;
+    position: relative;
+}
+.main-hero h2{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3em;
+    transform: translateX(-50%);
+}
+
+.logo{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 45%;
+    transform: translate(-50%);
+}
+
+/* Header--------------------------------------------------------------------------------------------- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.main-list-of-recordings{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--hero-color);
+    opacity: .8;
+    padding: 5px 0px 5px 8px;
+    font-size: 12px;
+}
+
+
+.main-nav ul{
+    display: flex;    
+    list-style: none;
+}
+.main-nav li{
+    margin-right: 40px;
+}
+.main-nav a{
+    text-decoration: none;
+    color: var(--hero-color);
+    opacity: .8;
+}
+.main-nav a:hover{
+    opacity: 1;
+    text-shadow: 0 0 5px black;
+}
+
+.bars{
+    display:none;
+    color: white;
+}
+
+/* Sidebar-------------------------------------------------- */
+.main-sidebar{
+    position: absolute;
+    top: 54px;
+    left: 0px;
+}
+
+.main-sidebar li{
+    padding: 0.5em 0.5em;
+    list-style: none;
+    transition: 0.5s;
+    color: var(--hero-color);
+    text-shadow: 0 0 5px black;
+    font-size: 18px;
+}
+
+.main-sidebar li:hover{
+    transform: translateX(20px);
+    color: goldenrod;
+}
+
+.main-sidebar a{
+    text-decoration: none;
+}
+
+
+
+/* Main content-------------------------------------------------------------------------------------- */
+
+.main-enter-selection{
+    text-align: center;
+    color: white;
+}
+.main-enter-selection div{
+    padding: 50px 0px;
+    font-size: 1.5em;
+
+}
+.main-enter-selection form{
+    margin: 0px auto;
+    border: 2px solid var(--hero-color);
+    border-radius: 25px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.main-enter-selection input{
+    border: none;
+    width: 88%;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    color: black;
+}
+.main-enter-selection button{
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 7px 0px;
+    border-radius: 50%;
+    width: 9%;
+}
+
+.or{
+    text-align: center;
+    padding: 40px;
+    color: white;
+    font-size: 1.5em;
+
+}
+
+/* Grid ----------------------------------------------------------*/
+.grid{
+    justify-content: center;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 150px 150px 150px;
+    margin-top: 3em;
+}
+
+.grid-cell{
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+}
+.grid-cell:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid gray;
+    color: goldenrod;
+}
+
+.grid-cell img {
+    width: 80px;
+    height: 100px;
+    padding: 20px 10px;
+    border-radius: 50%;
+}
+.grid-cell span {
+    display: inline-block;
+    color: var(--hero-color);
+}
+.grid-cell:hover span{
+    color:goldenrod;
+}
+
+
+/* Footer--------------------------------------------------------------------------------- */
+footer{
+    text-align: center;
+    margin-top: 12.5em;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--hero-color);
+    padding: 0px 0px 50px 0px;
+}
+
+.socials i{
+    padding: 15px;
+    transition: 1s;
+}
+.socials i:hover{
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+footer p{
+    margin-top: 40px;
+}
+footer a{
+    color: var(--hero-color);
+    opacity: 0.8;
+}
+footer a:hover{
+    opacity: 1;
+    color:goldenrod;
+}
+
+
+
+
+/* Media queries------------------------------------------------------------------------- */
+
+@media (max-width: 1028px){
+    .main-nav{
+        display: none;
+    }
+    .main-enter-selection strong{
+        padding:0px 30px 0px 30px;
+    }
+    .logo{
+        width: 380px;
+    }
+    .bars{
+        display:block;
+        margin-right: 30px;
+    }
+}
+
+
+@media (max-width: 579px){
+    .grid{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 150px 150px 150px 150px 150px;
+    }
+}

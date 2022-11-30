@@ -1,0 +1,95 @@
+
+/* About, ändringar */
+.main-hero{
+    height: 50vh;
+}
+.main-hero h2{
+    top: 45%;
+}
+
+
+/* About section, tillägg----------------------------------------*/
+
+.about-section{
+    background-color: rgba(22, 155, 213, 0.3);
+    display: flex;
+    padding: 70px 130px 130px 130px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-text{
+    flex:1;
+    color: white;
+}
+.about-text strong{
+    display: block;
+    font-size: 1.2rem;
+}
+
+.about-img{
+    flex:1;
+    text-align: center;
+    margin: auto;
+}
+
+.about-img img{
+    width: 250px;
+}
+
+.about-img a{
+    display: block;
+    color:white;
+    text-decoration: none;
+}
+
+.about-img a:hover{
+    color: rgb(172, 172, 172);
+}
+
+
+
+
+/* Media queries------------------------------------------------ */
+
+@media (max-width: 1028px){
+    .main-nav{
+        display: none;
+    }
+    .main-enter-selection strong{
+        padding:0px 30px 0px 30px;
+    }
+    .logo{
+        width: 380px;
+    }
+    .bars{
+        display:block;
+        margin-right: 30px;
+    }
+
+    .about-section{
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .about-img{
+        margin: 30px 0px 0px 0px;
+    }
+}
+
+
+@media (max-width: 579px){
+    .grid{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 150px 150px 150px 150px 150px;
+    }
+    .logo{
+        margin-top: 30px;
+    }
+
+    .main-hero h2{
+        font-size: 1rem;
+    }
+}
+
+
+
