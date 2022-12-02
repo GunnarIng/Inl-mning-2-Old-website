@@ -17,7 +17,7 @@ body{
 
 /* HERO----------------------------------------------------------- */
 .main-hero{
-    background-image: url(/Images/jesus-background.jpg);
+    background-image: url(../Images/jesus-background.jpg);
     background-size: cover;
     background-position: top center;
     height: 75vh;
